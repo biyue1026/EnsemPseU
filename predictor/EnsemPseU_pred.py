@@ -91,7 +91,8 @@ def Kmer123(sequences):
 
         kmer3 = [0] * 64
         for j in range(len(seq) - 3 + 1):
-            kmer3[AADict[seq[j]] * 16 + AADict[seq[j + 1]] * 4 + AADict[seq[j + 2]]] = kmer3[AADict[seq[j]] * 16 + AADict[seq[j + 1]] * 4 + AADict[seq[j + 2]]] + 1
+            kmer3[AADict[seq[j]] * 16 + AADict[seq[j + 1]] * 4 + AADict[seq[j + 2]]] = 
+                                         kmer3[AADict[seq[j]] * 16  + AADict[seq[j + 1]] * 4 + AADict[seq[j + 2]]] + 1
         if sum(kmer3) != 0:
             kmer3 = [i / sum(kmer3) for i in kmer3]
 
